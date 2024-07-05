@@ -17,15 +17,20 @@ body {
 .input {
   background-color: transparent;
   margin: 10px 50px;
+  width: 160px;
   border: none;
   outline: none;
   color: rgb(100, 100, 100);
+  transition: width 0.3;
+  transition-delay: 1s;
 }
 
 .mic-icon {
   width: 30px;
   position: absolute;
   right: 20px;
+  transition: width 0.3s;
+  transition-delay: 1s;
 }
 
 .search-bar-container {
@@ -36,6 +41,7 @@ body {
   border-radius: 50px;
   height: 50px;
   width: 250px;
+  transition: width 1s;
   margin: 10px;
   background-color: aliceblue;
   padding: 5px 10px;
@@ -43,14 +49,16 @@ body {
     -4px -4px 7px rgba(255, 255, 255, 0.9);
 }
 
-.active.search-bar-container {
+.search-bar-container.active {
   width: 50px;
 }
 
-.active.input {
+.active .input {
   width: 0;
+  transition-delay: 0s;
 }
 
-.active.mic-icon {
+.active .mic-icon {
   width: 0;
+  transition-delay: 0s;
 }
